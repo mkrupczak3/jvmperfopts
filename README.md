@@ -8,7 +8,7 @@ What if we only cleaned up when we were drowning in darts (memory very full)?
 
 What if we formed a union, and told the parents we'd only clean up at most 1% of the time?
 
-Moreover, what if we said we'd clean up for no more than 40ms at a time?
+Moreover, what if we said we'd clean up for no more than 25ms at a time?
 
 What if we had people SPECIFICLALY HIRED TO CLEAN UP OUR MESS AND KEEP TRACK OF WHAT TO CLEAN WHILE WE'RE PLAYING (GC threads)
 
