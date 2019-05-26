@@ -28,11 +28,4 @@ https://docs.oracle.com/javase/9/gctuning/garbage-first-garbage-collector-tuning
 https://stackoverflow.com/questions/36345409/why-does-g1gc-shrink-the-young-generation-before-starting-mixed-collections#36428963
 
 
--Xms12G -Xmx12G -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:GCTimeRatio=99 -XX:MaxTenuringThreshold=4 -XX:G1NewSizePercent=60 -XX:InitiatingHeapOccupancyPercent=90 -XX:G1MixedGCLiveThresholdPercent=95 -XX:G1ReservePercent=5 -XX:G1MixedGCCountTarget=30 -XX:G1OldCSetRegionThresholdPercent=5 -XX:MaxGCPauseMillis=40 -XX:G1HeapRegionSize=32M -XX:G1ConcRefinementThreads=2 -XX:ParallelGCThreads=4 -XX:G1HeapWastePercent=70 -XX:+AlwaysPreTouch -XX:+DisableExplicitGC -XX:+ParallelRefProcEnabled -XX:G1UseAdaptiveIHOP -XX:+AggressiveOpts
-
-
--Xms10G -Xmx10G -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:GCTimeRatio=99 -XX:MaxTenuringThreshold=4 -XX:G1NewSizePercent=60 -XX:InitiatingHeapOccupancyPercent=90 -XX:G1MixedGCLiveThresholdPercent=95 -XX:G1ReservePercent=7 -XX:G1MixedGCCountTarget=8 -XX:G1OldCSetRegionThresholdPercent=5 -XX:MaxGCPauseMillis=40 -XX:G1HeapRegionSize=32M -XX:G1ConcRefinementThreads=2 -XX:ParallelGCThreads=4 -XX:G1HeapWastePercent=70 -XX:+ParallelRefProcEnabled -XX:+DisableExplicitGC -XX:+AggressiveOpts
-
--Xms10G -Xmx10G -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:GCTimeRatio=99 -XX:MaxTenuringThreshold=4 -XX:G1NewSizePercent=60 -XX:InitiatingHeapOccupancyPercent=90 -XX:G1MixedGCLiveThresholdPercent=95 -XX:G1ReservePercent=7 -XX:G1MixedGCCountTarget=8 -XX:G1OldCSetRegionThresholdPercent=5 -XX:MaxGCPauseMillis=40 -XX:G1HeapRegionSize=32M -XX:G1ConcRefinementThreads=2 -XX:ParallelGCThreads=4 -XX:G1HeapWastePercent=70 -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:+DisableExplicitGC -XX:+AggressiveOpts
-
 -Xms10G -Xmx10G -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:GCTimeRatio=99 -XX:MaxTenuringThreshold=4 -XX:G1NewSizePercent=60 -XX:InitiatingHeapOccupancyPercent=90 -XX:G1MixedGCLiveThresholdPercent=95 -XX:G1ReservePercent=7 -XX:G1MixedGCCountTarget=8 -XX:G1OldCSetRegionThresholdPercent=5 -XX:MaxGCPauseMillis=25 -XX:G1HeapRegionSize=32M -XX:G1ConcRefinementThreads=2 -XX:ParallelGCThreads=4 -XX:G1HeapWastePercent=70 -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:+DisableExplicitGC -XX:+AggressiveOpts
