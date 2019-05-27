@@ -14,7 +14,7 @@ What if we formed a union, and told the parents we'd only clean up at most 1% of
 
 Moreover, what if we said we'd clean up for no more than 25ms at a time?
 
-What if we had people SPECIFICLALY HIRED TO CLEAN UP OUR MESS AND KEEP TRACK OF WHAT TO CLEAN WHILE WE'RE PLAYING (GC threads)
+What if we had people SPECIFICLY HIRED TO CLEAN UP OUR MESS AND KEEP TRACK OF WHAT TO CLEAN WHILE WE'RE PLAYING (GC threads)
 
 WHAT IF SAFETY WASN'T A CONCERN?
 
