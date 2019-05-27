@@ -1,4 +1,8 @@
+![pic of dog doesn't know what its doing](https://i0.kym-cdn.com/entries/icons/original/000/008/342/ihave.jpg "Ruff!")
+
 So, java stinks basically. It's like there's these crazy kids with an apocalyptic, world ending, huge nerf war going on, shooting darts (memory) around like crazy. Every so often the parents (garbage collector) comes downstairs, sees the mess, and forces the kids (processors) to stop what they're doing to clean up. Time spent sitting around cleaning up means less fun time.
+
+
 
 But...
 
@@ -33,6 +37,11 @@ https://stackoverflow.com/questions/36345409/why-does-g1gc-shrink-the-young-gene
 
 -Xms10G -Xmx10G -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:GCTimeRatio=99 -XX:MaxTenuringThreshold=4 -XX:G1NewSizePercent=60 -XX:InitiatingHeapOccupancyPercent=90 -XX:G1MixedGCLiveThresholdPercent=95 -XX:G1ReservePercent=7 -XX:G1MixedGCCountTarget=8 -XX:G1OldCSetRegionThresholdPercent=5 -XX:MaxGCPauseMillis=25 -XX:G1HeapRegionSize=32M -XX:G1ConcRefinementThreads=2 -XX:ParallelGCThreads=4 -XX:G1HeapWastePercent=70 -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:+DisableExplicitGC -XX:+AggressiveOpts
 
+# Tuning:
+Use as much RAM as humanly (or, uh, otherwise) possible. As of writing this, you can buy 32GB of ddr3 ram for 100$ on amazon. combine that with a dual core or quad core computer from a dumpster somewhere and you've got a great server put together.
+
+Set ParallelGCThreads to the number of cores on your system.
+Set G1ConcRefinementThreads to anywhere between n/4 to n/2 where n is the number of cores on your system.
 
 # Use Cases:
 
