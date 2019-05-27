@@ -49,12 +49,16 @@ Game Client: Run a minecraft client with a lot of RAM, no stuttering, only a sma
 
 Game Server: Run a minecraft server with almost no lag or "rubber-banding". Brief blips occasionally, but the more memory that is allocated the less often these small blips happen.
 
+Real time video: Streaming images, video, etc. Where extremely small blips are preferable to small pauses
+
 Other: IDK, maybe some kind of backend infrastructure where response time to a user is more important than using ungodly amounts of RAM. This conifg isn't desined for "throughput" in any traditional sense, but instead is focused on insanely lazy garbage collection: Cleaning up only when we are absolutely forced to, cleaning up for an extremely short period of time, and being really smart/lazy about what we choose to clean up when we do it.
 
 # Improvement:
 Honestly, the biggest bottlenecks here is probably -XX:G1NewSizePercent=60. This value is way higher than it is normally, and for some reason 60 is the highest value I've been able to run on the OpenJDK JVM without crashing. Pushing this value higher to 80 or 90 would allow these brief "blips" to only happen at 90% used RAM instead of 60, allowing almost 50% longer periods between blips for a given amount of memory. 
 
+It is possible that this advanced config with the newer G1GC is outperformed by older collecters, but IDK. 
+
 # Thoughts:
-The real takeaway here is that cleanup is no fun, and the only way around it is to be as messy as possible.  
+The real takeaway here is that cleanup is no fun, and the only way around it is to be as messy as possible.
 
 
