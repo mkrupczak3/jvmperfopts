@@ -40,6 +40,7 @@ https://stackoverflow.com/questions/36345409/why-does-g1gc-shrink-the-young-gene
 # Tuning:
 Use as much RAM as humanly (or, uh, otherwise) possible. As of writing this, you can buy 32GB of ECC DDR3 ram for 100$ on amazon. combine that with a dual core or quad core computer from a dumpster somewhere and you've got a great server put together.
 
+Set -Xms and -Xmx to nG where n is the number of gigabytes of memory you are willing to sacrifice
 Set ParallelGCThreads to the number of cores on your system.
 Set G1ConcRefinementThreads to anywhere between n/4 to n/2 where n is the number of cores on your system.
 
