@@ -1,5 +1,3 @@
-![pic of dog doesn't know what its doing](https://i0.kym-cdn.com/entries/icons/original/000/008/342/ihave.jpg "Ruff!")
-
 So, java stinks basically. It's like there's these crazy kids with an apocalyptic, world ending, huge nerf war going on, shooting darts (memory) around like crazy. Every so often the parents (java) comes downstairs, sees the mess, and forces the kids (processors) to stop what they're doing to clean up. Time spent sitting around cleaning up means less fun time.
 
 
