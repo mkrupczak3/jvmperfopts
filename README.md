@@ -46,6 +46,8 @@ Set G1ConcRefinementThreads to anywhere between n/4 to n/2 where n is the number
 
 # Use Cases:
 
+Backend: load up a server with as much RAM as possible, then use something like this config to ensure that a user is never kept waiting on GC to get a result returned. Commercial proprietary hardware/software boxes exist for this with java, but this tuning could work just as well probably. LinkedIn has written some engineering blog posts on how to tune the java garbage collector as well.
+
 Game Client: Run a minecraft client with a lot of RAM, no stuttering, only a small "blip" every few minutes, very good for competitive (e.g. multiplayer) etc.
 
 Game Server: Run a minecraft server with almost no lag or "rubber-banding". Brief blips occasionally, but the more memory that is allocated the less often these small blips happen.
