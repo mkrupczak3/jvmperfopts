@@ -59,7 +59,7 @@ Other: IDK, maybe some kind of backend infrastructure where response time to a u
 # Improvement:
 Honestly, the biggest bottlenecks here is probably -XX:G1NewSizePercent=60. This value is way higher than it is normally, and for some reason 60 is the highest value I've been able to run on the OpenJDK JVM without crashing. Pushing this value higher to 80 or 90 would allow these brief "blips" to only happen at 90% used RAM instead of 60, allowing almost 50% longer periods between blips for a given amount of memory. 
 
-It is possible that this advanced config with the newer G1GC is outperformed by the older ConcMarkGC, but this requires further testing
+It is possible that this advanced config with the newer G1GC is outperformed by the older ConcMarkGC, (edit: or the [Shenandoah GC](https://wiki.openjdk.java.net/display/shenandoah/Main) or [ZGC](https://wiki.openjdk.java.net/display/zgc/Main)) but this requires further testing
 
 # Thoughts:
 The real takeaway here is that cleanup is no fun, and the only way around it is to be as messy as possible.
