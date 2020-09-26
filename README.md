@@ -56,10 +56,19 @@ Real time video: Streaming images, video, etc. Where extremely small blips are p
 
 Other: IDK, maybe some kind of backend infrastructure where response time to a user is more important than using large amounts of RAM. This conifg isn't desined for "throughput" in any traditional sense, but instead is focused on insanely lazy garbage collection: Cleaning up only when we are absolutely forced to, cleaning up for an extremely short period of time, and being really smart/lazy about what we choose to clean up when we do it.
 
+
 # Improvement:
 Honestly, the biggest bottlenecks here is probably -XX:G1NewSizePercent=60. This value is way higher than it is normally, and for some reason 60 is the highest value I've been able to run on the OpenJDK JVM without crashing. Pushing this value higher to 80 or 90 would allow these brief "blips" to only happen at 90% used RAM instead of 60, allowing almost 50% longer periods between blips for a given amount of memory. 
 
 It is possible that this absurd config with the newer G1GC is outperformed by the older ConcMarkGC, (edit: or the [Shenandoah GC](https://wiki.openjdk.java.net/display/shenandoah/Main) or [ZGC](https://wiki.openjdk.java.net/display/zgc/Main)) but this requires further testing
+
+# Oopsie-Daisy:
+Please don't use this config for any real setup. There are much better solutions:
+
+I have actually tinkered with different garbage collectors quite a bit with Minecraft, and while I haven't tested the ZGC, I have found the performance of the Shenandoah GC to be VASTLY superior to the default G1GC, the G1GC with tailored tunings for Minecraft, and the ConcMarkSweepGC.
+
+I've compiled my thoughts here below:
+https://github.com/mkrupczak3/jvmperfopts/issues/1#issuecomment-699334194
 
 # Thoughts:
 The real takeaway here is that cleanup is no fun, and the only way around it is to be as messy as possible.
