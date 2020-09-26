@@ -67,7 +67,7 @@ Please don't use this config for any real setup. There are much better solutions
 
 I have actually tinkered with different garbage collectors quite a bit with Minecraft, and while I haven't tested the ZGC, I have found the performance of the Shenandoah GC to be VASTLY superior to the default G1GC, the G1GC with tailored tunings for Minecraft, and the ConcMarkSweepGC.
 
-Please use the Shenandoah or ZGC instead!
+Please use the Shenandoah or ZGC instead of these tunings and/or the G1GC for a Minecraft server!
 
 I've compiled my thoughts here below:
 https://github.com/mkrupczak3/jvmperfopts/issues/1#issuecomment-699334194
